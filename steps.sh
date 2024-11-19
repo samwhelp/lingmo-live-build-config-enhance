@@ -298,6 +298,9 @@ master_var_init () {
 
 
 
+	##
+	## ## Build Live Config / Package
+	##
 
 	REF_SOURCE_OVERLAY_MASTER_PACKAGE_DIR_NAME="package"
 	REF_SOURCE_OVERLAY_MASTER_PACKAGE_DIR_PATH="${REF_PLAN_ASSET_DIR_PATH}/${REF_SOURCE_OVERLAY_MASTER_PACKAGE_DIR_NAME}"
@@ -309,6 +312,18 @@ master_var_init () {
 	REF_TARGET_OVERLAY_MASTER_PACKAGE_INSTALL_DIR_NAME="package-lists"
 	REF_TARGET_OVERLAY_MASTER_PACKAGE_INSTALL_DIR_PATH="${REF_BUILD_LIVE_CONFIG_DIR_PATH}/${REF_TARGET_OVERLAY_MASTER_PACKAGE_INSTALL_DIR_NAME}"
 
+
+
+
+	##
+	## ## Build Live Config / Hook
+	##
+
+	REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_NAME="hook"
+	REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_PATH="${REF_PLAN_FACTORY_DIR_PATH}/${REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_NAME}"
+
+	REF_TARGET_OVERLAY_MASTER_HOOK_DIR_NAME="hooks/live"
+	REF_TARGET_OVERLAY_MASTER_HOOK_DIR_PATH="${REF_BUILD_LIVE_CONFIG_DIR_PATH}/${REF_TARGET_OVERLAY_MASTER_HOOK_DIR_NAME}"
 
 
 
@@ -758,7 +773,7 @@ lingmo_build_iso_overlay () {
 
 	lingmo_master_os_package_overlay
 
-	#lingmo_live_build_config_overlay
+	lingmo_live_build_config_hook_overlay
 
 
 
@@ -822,8 +837,21 @@ lingmo_master_os_package_overlay () {
 ## ## Lingmo / Live Build Config / Overlay
 ##
 
-lingmo_live_build_config_overlay () {
+lingmo_live_build_config_hook_overlay () {
 
+
+	local source_dir_path="${REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_PATH}"
+	local target_dir_path="${REF_TARGET_OVERLAY_MASTER_HOOK_DIR_PATH}"
+
+	util_error_echo
+	util_error_echo "##"
+	util_error_echo "## ## Lingmo / Master OS / Package"
+	util_error_echo "##"
+	util_error_echo
+
+	util_error_echo
+	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
+	cp -rf "${source_dir_path}/." "${target_dir_path}"
 
 
 	return 0
