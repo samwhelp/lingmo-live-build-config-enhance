@@ -780,6 +780,8 @@ lingmo_build_iso_overlay () {
 	util_error_echo "##"
 	util_error_echo
 
+	lingmo_factory_master_os_file_overlay
+
 	lingmo_master_os_file_overlay
 
 	lingmo_master_os_package_overlay
@@ -788,6 +790,42 @@ lingmo_build_iso_overlay () {
 
 
 
+
+
+	return 0
+}
+
+
+##
+## ## Lingmo / Master OS / Factory Overlay
+##
+
+lingmo_factory_master_os_file_overlay () {
+
+
+	local source_dir_path="${REF_SOURCE_FACTORY_OVERLAY_MASTER_OS_DIR_PATH}"
+	local target_dir_path="${REF_TARGET_FACTORY_OVERLAY_MASTER_OS_DIR_PATH}"
+
+	util_error_echo
+	util_error_echo "##"
+	util_error_echo "## ## Lingmo / Master OS / Factory Overlay"
+	util_error_echo "##"
+	util_error_echo
+
+
+	util_error_echo
+	util_error_echo mkdir -p "${source_dir_path}"
+	mkdir -p "${source_dir_path}"
+
+
+	util_error_echo
+	util_error_echo mkdir -p "${target_dir_path}"
+	mkdir -p "${target_dir_path}"
+
+
+	util_error_echo
+	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
+	cp -rf "${source_dir_path}/." "${target_dir_path}"
 
 
 	return 0
@@ -809,6 +847,17 @@ lingmo_master_os_file_overlay () {
 	util_error_echo "## ## Lingmo / Master OS / Overlay"
 	util_error_echo "##"
 	util_error_echo
+
+
+	util_error_echo
+	util_error_echo mkdir -p "${source_dir_path}"
+	mkdir -p "${source_dir_path}"
+
+
+	util_error_echo
+	util_error_echo mkdir -p "${target_dir_path}"
+	mkdir -p "${target_dir_path}"
+
 
 	util_error_echo
 	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
@@ -835,6 +884,17 @@ lingmo_master_os_package_overlay () {
 	util_error_echo "##"
 	util_error_echo
 
+
+	util_error_echo
+	util_error_echo mkdir -p "${source_dir_path}"
+	mkdir -p "${source_dir_path}"
+
+
+	util_error_echo
+	util_error_echo mkdir -p "${target_dir_path}"
+	mkdir -p "${target_dir_path}"
+
+
 	util_error_echo
 	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
 	cp -rf "${source_dir_path}/." "${target_dir_path}"
@@ -860,9 +920,16 @@ lingmo_live_build_config_hook_overlay () {
 	util_error_echo "##"
 	util_error_echo
 
+
+	util_error_echo
+	util_error_echo mkdir -p "${source_dir_path}"
+	mkdir -p "${source_dir_path}"
+
+
 	util_error_echo
 	util_error_echo mkdir -p "${target_dir_path}"
 	mkdir -p "${target_dir_path}"
+
 
 	util_error_echo
 	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
