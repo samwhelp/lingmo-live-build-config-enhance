@@ -641,7 +641,7 @@ lingmo_build_iso_develop_test_prototype () {
 
 	#lingmo_build_iso_create
 
-	lingmo_build_iso_overlay
+	#lingmo_build_iso_overlay
 
 
 
