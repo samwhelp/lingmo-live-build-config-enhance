@@ -322,7 +322,7 @@ master_var_init () {
 	REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_NAME="hook"
 	REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_PATH="${REF_PLAN_FACTORY_DIR_PATH}/${REF_SOURCE_OVERLAY_MASTER_HOOK_DIR_NAME}"
 
-	REF_TARGET_OVERLAY_MASTER_HOOK_DIR_NAME="hooks/live"
+	REF_TARGET_OVERLAY_MASTER_HOOK_DIR_NAME="hooks/normal"
 	REF_TARGET_OVERLAY_MASTER_HOOK_DIR_PATH="${REF_BUILD_LIVE_CONFIG_DIR_PATH}/${REF_TARGET_OVERLAY_MASTER_HOOK_DIR_NAME}"
 
 
@@ -834,7 +834,7 @@ lingmo_master_os_package_overlay () {
 
 
 ##
-## ## Lingmo / Live Build Config / Overlay
+## ## Lingmo / Live Build Config / Hook
 ##
 
 lingmo_live_build_config_hook_overlay () {
@@ -845,9 +845,13 @@ lingmo_live_build_config_hook_overlay () {
 
 	util_error_echo
 	util_error_echo "##"
-	util_error_echo "## ## Lingmo / Master OS / Package"
+	util_error_echo "## ## Lingmo / Master OS / Hook"
 	util_error_echo "##"
 	util_error_echo
+
+	util_error_echo
+	util_error_echo mkdir -p "${target_dir_path}"
+	mkdir -p "${target_dir_path}"
 
 	util_error_echo
 	util_error_echo cp -rf "${source_dir_path}/." "${target_dir_path}"
