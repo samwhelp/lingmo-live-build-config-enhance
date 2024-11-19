@@ -9,7 +9,7 @@ set -e
 ## ## Install dconf-cli
 ##
 
-apt install dconf-cli
+apt-get install dconf-cli
 
 
 
