@@ -732,7 +732,7 @@ lingmo_build_iso_prepare_iso_profile () {
 
 	if [[ -d "${iso_profile_dir_path}" ]]; then
 
-		return 0 ## for codeing
+		#return 0 ## for codeing
 
 		lingmo_target_os_unmount_for_chroot
 
