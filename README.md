@@ -7,6 +7,8 @@
 | Link | GitHub |
 | ---- | ------ |
 | [lingmo-live-build-config-enhance](https://samwhelp.github.io/lingmo-live-build-config-enhance/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-config-enhance) |
+| [lingmo-live-build-config-remix](https://samwhelp.github.io/lingmo-live-build-config-remix/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-config-remix) |
+| [lingmo-live-build-config-using](https://samwhelp.github.io/lingmo-live-build-config-using/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-config-using) |
 | [Lingmo OS / Adjustment](https://samwhelp.github.io/lingmo-adjustment/) | [GitHub](https://github.com/samwhelp/lingmo-adjustment) |
 
 
